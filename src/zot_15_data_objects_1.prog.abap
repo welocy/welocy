@@ -1,8 +1,6 @@
 *&---------------------------------------------------------------------*
-*& Report zot_15_hello_deneme
+*& Report zot_15_data_objects_1
 *&---------------------------------------------------------------------*
 *&
 *&---------------------------------------------------------------------*
-REPORT zot_15_hello_deneme.
-cl_demo_output=>write( 'Hello World' ).
-cl_demo_output=>display(  ).
+REPORT zot_15_data_objects_1.
