@@ -9,6 +9,7 @@
     <CLIDEP>X</CLIDEP>
     <DDTEXT>İletişim Türleri Tablosu</DDTEXT>
     <MASTERLANG>T</MASTERLANG>
+    <MAINFLAG>X</MAINFLAG>
     <CONTFLAG>A</CONTFLAG>
     <EXCLASS>1</EXCLASS>
    </DD02V>
