@@ -25,15 +25,23 @@ DATA:  BEGIN OF STATUS_ZOT_15_T_P_MAST               .   "state vector
 DATA:  END OF STATUS_ZOT_15_T_P_MAST               .
 CONTROLS: TCTRL_ZOT_15_T_P_MAST
             TYPE TABLEVIEW USING SCREEN '0001'.
+*...processing: ZOT_15_T_P_TWEET................................*
+DATA:  BEGIN OF STATUS_ZOT_15_T_P_TWEET              .   "state vector
+         INCLUDE STRUCTURE VIMSTATUS.
+DATA:  END OF STATUS_ZOT_15_T_P_TWEET              .
+CONTROLS: TCTRL_ZOT_15_T_P_TWEET
+            TYPE TABLEVIEW USING SCREEN '0005'.
 *.........table declarations:.................................*
 TABLES: *ZOT_15_T_P_AILE               .
 TABLES: *ZOT_15_T_P_EGTM               .
 TABLES: *ZOT_15_T_P_ILTSM              .
 TABLES: *ZOT_15_T_P_MAST               .
+TABLES: *ZOT_15_T_P_TWEET              .
 TABLES: ZOT_15_T_P_AILE                .
 TABLES: ZOT_15_T_P_EGTM                .
 TABLES: ZOT_15_T_P_ILTSM               .
 TABLES: ZOT_15_T_P_MAST                .
+TABLES: ZOT_15_T_P_TWEET               .
 
 * general table data declarations..............
   INCLUDE LSVIMTDT                                .
