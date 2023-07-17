@@ -13,7 +13,6 @@ SELECTION-SCREEN END OF BLOCK b1.
 
 DATA: lv_datediff TYPE p,
       lv_timediff TYPE p,
-      lv_earliest TYPE c,
       lv_saniye   TYPE uzeit.
 
 START-OF-SELECTION.
@@ -38,8 +37,8 @@ LOOP AT lt_zaman INTO DATA(ls_zmn).
         time2    = ls_zmn-bitiss
       IMPORTING
         datediff = lv_datediff
-        timediff = lv_timediff
-        earliest = lv_earliest.
+        timediff = lv_timediff.
+
 
     lv_saniye = ls_zmn-bitiss - ls_zmn-baslangics.
 
@@ -81,15 +80,3 @@ LOOP AT lt_zaman INTO DATA(ls_zmn).
     NEW-LINE.
 
   ENDLOOP.
-
-
-
-
-*initial tablo oluştur
-
-*select single bitist
-*from zot_15_t_zmn
-*where idi eq 2
-*into @DATA(lv_tarih).
-*
-*write :/ lv_tarih.
