@@ -5,15 +5,9 @@
 *&---------------------------------------------------------------------*
 REPORT zot_15_hello_deneme.
 
-DATA: a,b,c type i.
-      a ='81'.
-      b ='12'.
-      c = a + b.
+data lv_hello type char12 value 'Hello World!'.
 
-cl_demo_output=>write( c ).
+write : lv_hello.
 
-c = a - b.
-cl_demo_output=>write( c ).
-
-BREAK otmyildiz.
-cl_demo_output=>display(  ).
+*cl_demo_output=>write_data( lv_hello ).
+*cl_demo_output=>display(  ).

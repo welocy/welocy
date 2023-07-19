@@ -37,9 +37,10 @@ if p_sat eq 'X'.
             eban~meins,
             eban~menge
        from eban
- inner join ekpo  on eban~matkl = ekpo~matkl
-      where eban~banfn in @s_satno and
-            eban~matkl in @s_satbel
+ inner join ekpo  on eban~banfn = ekpo~banfn AND
+                     eban~bnfpo = ekpo~bnfpo
+      where eban~banfn in @s_sasno  and
+            eban~matkl in @s_sasmal
  into table @data(lt_sat).
 
 
@@ -73,7 +74,8 @@ else.
              ekpo~meins,
              ekpo~menge
        from  ekpo
-  inner join eban  on ekpo~matkl = eban~matkl
+  inner join eban  on ekpo~banfn = eban~banfn and
+                      ekpo~bnfpo = eban~bnfpo
        where ekpo~banfn in @s_satno and
              ekpo~matkl in @s_satbel
   into table @data(lt_sas).
