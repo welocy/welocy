@@ -5,6 +5,16 @@
 *&---------------------------------------------------------------------*
 REPORT zot_15_p_internal_tables.
 
+
+types: begin of lty_collect,
+       matkl type matkl,
+       menge type menge_d,
+       end of lty_collect.
+
+       data: lt_collect type table of lty_collect,
+             ls_collect type lty_collect.
+
+
 select matnr,
        maktx,
        matkl,
@@ -48,11 +58,13 @@ loop at lt_material into data(ls_material).
 
 read table lt_material2 into data(ls_material2) with key meins = ls_material-meins.
 
-     if sy-subrc = 0.
+      if sy-subrc = 0.
 
-      ls_material-menge += 10.
+         ls_material-menge += 10.
 
-     endif.
+         modify lt_material from ls_material transporting menge.
+
+      endif.
 
 endloop.
 
@@ -61,29 +73,22 @@ data lt_materialmix type table of zot_00_t_materia.
 lt_materialmix = value #( base lt_materialmix ( lines of lt_material )
                                               ( lines of lt_material2 )
                                                                        ).
-data: lt_material3 type table of zot_00_t_materia,
-      ls_material3 type zot_00_t_materia.
-
 
 loop at lt_materialmix into data(ls_materialmix).
 
-collect ls_material3 into lt_material3.
+        ls_collect-matkl = ls_materialmix-matkl.
+        ls_collect-menge = ls_materialmix-menge.
+
+        collect ls_collect into lt_collect.
 
 endloop.
 
 delete lt_materialmix where menge < 10.
 
-sort lt_material3 ascending by menge.
-sort lt_materialmix descending by menge.
+sort lt_collect descending by menge.
+sort lt_materialmix ascending by menge.
 
+cl_demo_output=>write_data( lt_materialmix ).
+cl_demo_output=>write_data( lt_collect ).
 
-
-
-cl_demo_output=>display( lt_material3 ).
-cl_demo_output=>display( lt_materialmix ).
-
-
-
-
-*cl_demo_output=>display( lt_material3 ).
-*sort lt_material3 ascending by menge.
+cl_demo_output=>display(  ).
