@@ -18,39 +18,39 @@
     </item>
     <item>
      <ID>S</ID>
-     <KEY>P_SASMAL</KEY>
-     <ENTRY>SAS MAL GRUBU</ENTRY>
+     <KEY>P_SAS</KEY>
+     <ENTRY>SAS&apos;A GÖRE</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_SAT</KEY>
+     <ENTRY>SAT&apos;A GÖRE</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_SASMAL</KEY>
+     <ENTRY>SAS Mal Grubu</ENTRY>
      <LENGTH>21</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>P_SASNO</KEY>
+     <KEY>S_SASNO</KEY>
      <ENTRY>SAS NO</ENTRY>
      <LENGTH>14</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>P_SATBEL</KEY>
-     <ENTRY>SAT BELGE TÜRÜ</ENTRY>
-     <LENGTH>22</LENGTH>
+     <KEY>S_SATBEL</KEY>
+     <ENTRY>SAT Belge</ENTRY>
+     <LENGTH>17</LENGTH>
     </item>
     <item>
      <ID>S</ID>
-     <KEY>P_SATNO</KEY>
+     <KEY>S_SATNO</KEY>
      <ENTRY>SAT NO</ENTRY>
      <LENGTH>14</LENGTH>
-    </item>
-    <item>
-     <ID>S</ID>
-     <KEY>P_T_AT</KEY>
-     <ENTRY>?...</ENTRY>
-     <LENGTH>12</LENGTH>
-    </item>
-    <item>
-     <ID>S</ID>
-     <KEY>P_T_DEGI</KEY>
-     <ENTRY>?...</ENTRY>
-     <LENGTH>12</LENGTH>
     </item>
    </TPOOL>
   </asx:values>

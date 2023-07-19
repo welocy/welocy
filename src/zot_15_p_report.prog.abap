@@ -10,12 +10,12 @@ data gs_layout type slis_layout_alv.
 
 SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE TEXT-001.
 SELECT-OPTIONS: s_satno FOR eban-banfn ,
-                s_satbel FOR eban-matkl.
+               s_satbel FOR eban-matkl.
 SELECTION-SCREEN END OF BLOCK b1.
 
 SELECTION-SCREEN BEGIN OF BLOCK b2 WITH FRAME TITLE TEXT-002.
 SELECT-OPTIONS: s_sasno   FOR ekpo-ebeln NO INTERVALS,
-                s_sasmal FOR ekpo-matkl NO INTERVALS.
+                 s_sasmal FOR ekpo-matkl NO INTERVALS.
 SELECTION-SCREEN END OF BLOCK b2.
 
 SELECTION-SCREEN BEGIN OF BLOCK b3 WITH FRAME TITLE TEXT-003.
