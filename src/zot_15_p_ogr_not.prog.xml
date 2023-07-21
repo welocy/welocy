@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>ZOT_15_P_FLIGHT</NAME>
+    <NAME>ZOT_15_P_OGR_NOT</NAME>
     <DBAPL>S</DBAPL>
     <SUBC>1</SUBC>
     <FIXPT>X</FIXPT>
@@ -13,14 +13,8 @@
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Hava Yolları Rapor</ENTRY>
-     <LENGTH>18</LENGTH>
-    </item>
-    <item>
-     <ID>S</ID>
-     <KEY>P_BCODE</KEY>
-     <ENTRY>Barkod :</ENTRY>
-     <LENGTH>16</LENGTH>
+     <ENTRY>öğrenci not program</ENTRY>
+     <LENGTH>19</LENGTH>
     </item>
    </TPOOL>
   </asx:values>
